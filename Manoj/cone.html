@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mensuration&mdash;Cone</title>
+</head>
+<body>
+<script type="text/javascript">
+	function cone(){
+	var lsa, tsa, vol;
+	var radius = document.getElementById('radius').value;
+	var heigth = document.getElementById('height').value;
+	radius = Math.abs(radius);
+	height = Math.abs(height);
+	var sl = Math.sqrt((radius*radius) + (height*height));
+	vol = (1/3)*(Math.PI*Math.pow(radius,2)*height);
+	lsa = Math.PI*radius*sl;
+	tsa = Math.PI*radius*(radius+sl);
+	vol = vol.toFixed(4);
+	lsa = lsa.toFixed(4);
+	tsa = tsa.toFixed(4);
+	document.getElementById('vol').value = vol;
+	document.getElementById('tsa').value = tsa;
+	document.getElementById('lsa').value = lsa
+}
+</script>
+
+	<p>Input Radius and Height value and get the area, Total Surface Area(TSA) and Lateral Surface Area(LSA) of Cone.</p>
+    <label for="radius">Radius</label><input type="radius" name="radius" id="radius" required>
+    <label for="height">Height</label><input type="height" name="height" id="height" required>
+    <label for="vol">Volume</label><input type="vol" name="vol" id="vol">
+    <label for="tsa">Total Surface Area(TSA)</label><input type="text" name="tsa" id="tsa">
+    <label for="lsa">Lateral Surface Area(LSA)</label><input type="text" name="lsa" id="lsa">
+    <input type="submit" value="Calculate" id="submit" onclick="cone()">   
+  </body>
+</html>

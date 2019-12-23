@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mensuration&mdash;Square</title>
+</head>
+<body>
+<script type="text/javascript">
+	function square(){
+	var area, peri;
+	var length = document.getElementById('length').value;
+	length = Math.abs(length);
+	area = length*length;
+	peri = 2*length;
+	area = area.toFixed(4);
+	peri = peri.toFixed(4);
+	document.getElementById('area').value = area;
+	document.getElementById('peri').value = peri;
+}
+</script>
+
+	<p>Input length value and get the area and Perimenter of rectangle.</p>
+    <label for="length">Length</label><input type="length" name="length" id="length" required>
+    <label for="area">Area</label><input type="text" name="area" id="area">
+    <label for="peri">Perimeter</label><input type="text" name="peri" id="peri">
+    <input type="submit" value="Calculate" id="submit" onclick="square()">   
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mensuration&mdash;Cube</title>
+</head>
+<body>
+<script type="text/javascript">
+	function cube(){
+	var lsa, tsa, vol;
+	var length = document.getElementById('length').value;
+	length = Math.abs(length);
+	vol = Math.pow(length,3);
+	lsa = 4*Math.pow(length,2);
+	tsa = 6*Math.pow(length,2);
+	vol = vol.toFixed(4);
+	lsa = lsa.toFixed(4);
+	tsa = tsa.toFixed(4);
+	document.getElementById('vol').value = vol;
+	document.getElementById('tsa').value = tsa;
+	document.getElementById('lsa').value = lsa;
+}
+</script>
+
+	<p>Input length value and get the area, Total Surface Area(TSA) and Lateral Surface Area(LSA) of Cube.</p>
+    <label for="length">Length</label><input type="length" name="length" id="length" required>
+    <label for="vol">Volume</label><input type="vol" name="vol" id="vol">
+    <label for="tsa">Total Surface Area(TSA)</label><input type="text" name="tsa" id="tsa">
+    <label for="lsa">Lateral Surface Area(LSA)</label><input type="text" name="lsa" id="lsa">
+    <input type="submit" value="Calculate" id="submit" onclick="cube()">   
+  </body>
+</html>

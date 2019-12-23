@@ -1,41 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="mensuration.css">
 </head>
 <body>
-<style> 
-body{padding-top:30px;}
-label,input{display:block;} 
-</style>
+<div class="sidenav">
+  <a href="square.html">Square</a>
+  <a href="rectangle.html">Rectangle</a>
+  <a href="circle.html">Circle</a>
+  <a href="sphere.html">Sphere</a>
+  <a href="cylinder.html">Cylinder</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact">Search</a>
+</div>
 
-<script>
-function volume_sphere()
- {
-  var volume, area;
-  var radius = document.getElementById('radius').value;
-	radius = Math.abs(radius);
-  volume = (4/3) * Math.PI * Math.pow(radius, 3);
-  area = 4* Math.PI * Math.pow(radius, 2);
-  volume = volume.toFixed(4);
-  area = area.toFixed(4);
-	document.getElementById('volume').value = volume;
-		document.getElementById('area').value = area;
-
-  
- } 
-
-//window.onload = document.getElementById('MyForm').onsubmit = volume_sphere();
-
-</script>
-
-<p>Input radius value and get the volume of a sphere.</p>
-
-<label for="radius">Radius</label><input type="text" name="radius" id="radius" required>
-<label for="volume">Volume</label><input type="text" name="volume" id="volume">
-<label for="area">Area</label><input type="text" name="area" id="area">
-<input type="submit" value="Calculate" id="submit" onclick="volume_sphere()">   
-
+<div class="main">
+  <h2>Mensuration</h2>
+  <p>Click on the dropdown button to open the dropdown menu inside the side navigation.</p>
+  <p>This sidebar is of full height (100%) and always shown.</p>
+  <p>Some random text..</p>
+</div>
 
 </body>
-</html>
+</html> 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mensuration&mdash;Circle</title>
+</head>
+<body>
+<script type="text/javascript">
+	function circle(){
+	var area, cir;
+	var radius = document.getElementById('radius').value;
+	radius = Math.abs(radius);
+	area = 2*Math.PI*Math.pow(radius,2);
+	cir = 2*Math.PI*radius;
+	area = area.toFixed(4);
+	cir = cir.toFixed(4);
+	document.getElementById('area').value = area;
+	document.getElementById('cir').value = cir;
+}
+</script>
+
+	<p>Input radius value and get the area and circumference of a Circle.</p>
+    <label for="radius">Radius</label><input type="text" name="radius" id="radius" required>
+    <label for="area">Area</label><input type="text" name="area" id="area">
+    <label for="cir">Circumference</label><input type="text" name="cir" id="cir">
+    <input type="submit" value="Calculate" id="submit" onclick="circle()">   
+  </body>
+</html>

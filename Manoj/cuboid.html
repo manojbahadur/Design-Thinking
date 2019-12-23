@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mensuration&mdash;Cuboid</title>
+</head>
+<body>
+<script type="text/javascript">
+	function cuboid(){
+	var lsa, tsa, vol;
+	var length = document.getElementById('length').value;
+	var breadth = document.getElementById('breadth').value;
+	var heigth = document.getElementById('height').value;
+	length = Math.abs(length);
+	breadth = Math.abs(breadth);
+	height = Math.abs(height);
+	vol = length*breadth*height;
+	lsa = 2*height*(length+breadth);
+	tsa = 2*(length*breadth + breadth*height + length*height);
+	vol = vol.toFixed(4);
+	lsa = lsa.toFixed(4);
+	tsa = tsa.toFixed(4);
+	document.getElementById('vol').value = vol;
+	document.getElementById('tsa').value = tsa;
+	document.getElementById('lsa').value = lsa;
+}
+</script>
+
+	<p>Input Length, Breadth and Height value and get the area, Total Surface Area(TSA) and Lateral Surface Area(LSA) of Cuboid.</p>
+    <label for="length">Length</label><input type="length" name="length" id="length" required>
+    <label for="breadth">Breadth</label><input type="breadth" name="breadth" id="breadth" required>
+    <label for="height">Height</label><input type="height" name="height" id="height" required>
+    <label for="vol">Volume</label><input type="vol" name="vol" id="vol">
+    <label for="tsa">Total Surface Area(TSA)</label><input type="text" name="tsa" id="tsa">
+    <label for="lsa">Lateral Surface Area(LSA)</label><input type="text" name="lsa" id="lsa">
+    <input type="submit" value="Calculate" id="submit" onclick="cuboid()">   
+  </body>
+</html>
