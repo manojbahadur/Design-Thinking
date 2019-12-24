@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mensuration&mdash;Cone</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="mensuration.js"></script>
+	<link rel="stylesheet" type="text/css" href="mensuration.css">
+</head>
+<body>
+	<style> 
+body{padding-top:30px;}
+label,input{display:block;} 
+</style>	
+
+<div class="sidenav">
+  <a href="square.html">Square</a>
+  <a href="rectangle.html">Rectangle</a>
+  <a href="circle.html">Circle</a>
+  <a href="sphere.html">Sphere</a>
+  <a href="cylinder.html">Cylinder</a>
+  <a href="cube.html">Cube</a>
+  <a href="cuboid.html">Cuboid</a>
+  <a href="cone.html">Cone</a>
+</div>
+<div class="main">
+
+	<p>Input Radius and Height value and get the area, Total Surface Area(TSA) and Lateral Surface Area(LSA) of Cone.</p>
+    <label for="radius">Radius</label><input type="radius" name="radius" id="radius" required>
+    <label for="height">Height</label><input type="height" name="height" id="height" required>
+    <h3>Result</h3>
+    <label for="vol">Volume</label><input type="vol" name="vol" id="vol">
+    <label for="tsa">Total Surface Area(TSA)</label><input type="text" name="tsa" id="tsa">
+    <label for="lsa">Lateral Surface Area(LSA)</label><input type="text" name="lsa" id="lsa">
+    <input type="submit" value="Calculate" id="submit" onclick="cone()">  
+    </div> 
+  </body>
+</html>
