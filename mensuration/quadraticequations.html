@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title>Quadratic Equations</title>
+    <script src=stats.js></script>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            
+  </head>
+  <body style="color: white;">
+        <a href="DTcontentspagecode.html" class="waves-effect waves-light btn-small"><i class="material-icons left">arrow_back</i>back</a>
+    <h1 align="center">Quadratic Equations</h1>
+
+<script type="text/javascript">
+function equation() {
+  var a = document.getElementById('firstNumber').value;
+  var b = document.getElementById('secondNumber').value;
+  var c = document.getElementById('thirdNumber').value;
+  var discr = (b * b) - 4 * (a * c);
+  var sqrDiscr = Math.sqrt(discr);
+  document.getElementById('answer').value = discr;
+  if (a == 0 && b == 0 && c == 0){
+    document.getElementById('secondAnswer').value = "Something went wrong!";
+  }
+  else if (discr < 0){
+    document.getElementById('secondAnswer').value = "ROOTS ARE IMAGINARY";
+    document.getElementById('thirdAnswer').value = "-";
+  }else if (discr == 0){
+    document.getElementById('secondAnswer').value = "ROOTS ARE REAL AND EQUAL";
+    document.getElementById('thirdAnswer').value = ((- b - sqrDiscr) / (2 * a));
+  }else if (discr > 0){
+    document.getElementById('secondAnswer').value = "ROOTS ARE REAL AND DISTINCT";
+    document.getElementById('thirdAnswer').value = ((- b + sqrDiscr) / (2 * a)) + ";     " + ((- b - sqrDiscr) / (2 * a));
+  }
+}
+function cancel() {
+  document.getElementById('firstNumber').value = null;
+  document.getElementById('secondNumber').value = null;
+  document.getElementById('thirdNumber').value = null;
+  document.getElementById('answer').value = null;
+  document.getElementById('secondAnswer').value = null;
+  document.getElementById('thirdAnswer').value = null;
+}
+</script>
+      <div class="container">
+        <div class="col">
+          <div class="rows s12 m6 l4">
+            <div class="card blue-grey darken-1">
+                            <div class="card-content white-text">
+
+                <span class="card-title">Quadratic Equations</span>
+
+<div class="row">
+    <form class="col s12">
+<table class="features-table">
+<tr>
+<td>
+<div class="row">
+<input id="firstNumber" type="text" size="2"></input> * <big>x</big><sup><small>2</small></sup> &plusmn; <input id="secondNumber" type="text" size="2"></input> * x &plusmn; <input id="thirdNumber" type="text" size="2" value=""></input> = 0<p><small>(Enter coefficients)</small></p></br>
+<input class="btn" id="count" type="button" value="SOLVE" onclick="equation()"></input></br></br>
+</td>
+</tr>
+<tr>
+<td></br>
+<p>Discriminant is </p><input id="answer" type="text" size="5" readonly="readonly"></input></br>
+</td>
+</tr>
+<tr>
+<td></br>
+<p>Log </p><input id="secondAnswer" type="text" size="60" readonly="readonly"></input></input>
+</td>
+</tr>
+<tr>
+<td>
+<p>Roots</p><input id="thirdAnswer" type="text" readonly="readonly" style="width:100%"></input>
+<input class="btn" type="button" value="Clear" onclick="cancel()"></input>
+</td>
+</tr>
+</table>
+    </form>
+  </div> </div> </div> </div> </div> </div>
+
+  </body>
